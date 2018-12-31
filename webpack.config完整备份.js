@@ -13,8 +13,8 @@ let cssExtract=new ExtractTextWebpackPlugin({
 let glob=require('glob');*/
 let CopyWebpackPlugin=require('copy-webpack-plugin');
 module.exports={
-    entry:['./src/js/index.js','./src/js/index1.js','./src/index.html'],    //entry是数组，那么数组中的js文件，会打包成一个js文件
-    // entry:'./src/js/index.js', //入口
+    // entry:['./src/js/index.js','./src/js/index1.js'],    //entry是数组，那么数组中的js文件，会打包成一个js文件
+    entry:'./src/js/index.js', //入口
    /* entry:{   //多个入口，就要配置多个出口的js文件 把output中的filename配置成：'[name].[hash:8].js' ，[name是动态变量，会自动将入口的js文件分别打包
         index:'./src/js/index.js',
         index1:'./src/js/index1.js'
@@ -98,8 +98,7 @@ module.exports={
                         {loader:'postcss-loader'}
                     ]
                 })
-            },
-            {
+            },{
                 test:/\.(htm|html)$/,
                 use:['raw-loader']
             }
