@@ -18,7 +18,7 @@ npx webpack
 - 新建配置文件
 > webpack.config.js
 
-####在webpack中如何配置我们的开发服务器
+#### 在webpack中如何配置我们的开发服务器
 > webpack-dev-server 
 ```
 cnpm install webpack-dev-server -D
