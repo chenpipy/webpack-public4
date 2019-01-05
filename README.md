@@ -44,12 +44,6 @@ cnpm install clean-webpack-plugin -D
 ```
 cnpm install extract-text-webpack-plugin@next -D
 ```
-##### 3. style-loader css-loader less-loader less less-loader
-> style-loader 自动将样式文件通过style的方式引入 
-> css-loader 可以将css变成一个模块，再通过style-loader插入到html中
-```
-cnpm install style-loader css-loader  -D
-```
 
 ##### 4. purifycss-webpack purify-css glob 
 > purifycss-webpack purify-css glob 作用是将引用的css进行打包，如果没有引用，就忽略掉，提高效率
@@ -66,6 +60,23 @@ cnpm install postcss-loader  autoprefixer -D
 > copy-webpack-plugin 可以自动拷贝文档目录至dis文件夹
 ```
 cnpm install copy-webpack-plugin -D
+```
+#### webPack中的loader
+> loader的作用：loader 可以将文件从不同的语言（如 TypeScript）转换为 JavaScript，或将内联图像转换为 data URL。loader 甚至允许你直接在 JavaScript 模块中 import CSS文件！
+
+##### 1. style-loader css-loader less-loader less less-loader
+> style-loader 自动将样式文件通过style的方式引入 
+> css-loader 可以将css变成一个模块，再通过style-loader插入到html中
+```
+cnpm install style-loader css-loader  -D
+```
+##### 2.babel-loader  babel-core babel-preset-env  新版，不然不兼容
+> 1. babel-loader: babel-loader作为webpack的loader的一种，作用同其他loader一样，实现对特定文件类型的处理
+> 2. babel-core:babel-core的作用在于提供一系列api。这便是说，当webpack使用babel-loader处理文件时，babel-loader实际上调用了babel-core的api
+> 3. babel-preset-env:作用是告诉babel使用哪种转码规则进行文件处理
+> 4. babel-loader@8.0.0-beta.0 @babel/core @babel/preset-env @babel表示自版本7开始
+```
+cnpm install babel-loader@8 @babel/core @babel/preset-env  -D
 ```
 #### 如何查看各种插件的帮助文档
 > http://www.npmjs.com/package/插件的名称
